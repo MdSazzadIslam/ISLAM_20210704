@@ -22,11 +22,9 @@ ActiveRecord::Schema.define(version: 2021_07_01_203032) do
   end
 
   create_table "videos", force: :cascade do |t|
-    t.string "titile"
+    t.string "title"
     t.string "categoryId"
     t.string "name"
-    t.string "size"
-    t.string "type"
     t.string "path"
     t.string "thumbnails"
     t.datetime "created_at", precision: 6, null: false

@@ -1,9 +1,11 @@
 class VideosController < ApplicationController
+
   before_action :set_video, only: %i[ show edit update destroy ]
 
   # GET /videos or /videos.json
   def index
-    @videos = Video.all
+   # @categories = Category.all
+    @videos = Video.all()
   end
 
   # GET /videos/1 or /videos/1.json
@@ -12,6 +14,7 @@ class VideosController < ApplicationController
 
   # GET /videos/new
   def new
+
     @video = Video.new
   end
 
