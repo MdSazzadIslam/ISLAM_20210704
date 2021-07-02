@@ -1,3 +1,69 @@
 // Place all the styles related to the Video controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+body {
+  background-color: #f9f9fa;
+}
+
+.flex {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+@media (max-width: 991.98px) {
+  .padding {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .padding {
+    padding: 1rem;
+  }
+}
+
+.padding {
+  padding: 5rem;
+}
+
+p {
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.5rem;
+}
+
+.lightGallery {
+  width: 100%;
+  margin: 0;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.lightGallery .image-tile {
+  position: relative;
+  margin-bottom: 30px;
+  margin-right: 10px;
+}
+
+.lightGallery .image-tile .demo-gallery-poster {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.lightGallery .image-tile .demo-gallery-poster img {
+  display: block;
+  margin: auto;
+  width: 40%;
+  max-width: 60px;
+  min-width: 20px;
+  margin-top: 80px;
+}

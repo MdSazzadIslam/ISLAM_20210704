@@ -1,3 +1,4 @@
+<%= stylesheet_link_tag "video.css" %>
 <%= form_with(model: video) do |form| %>
   <% if video.errors.any? %>
     <div id="error_explanation">
@@ -10,54 +11,38 @@
       </ul>
     </div>
   <% end %>
+    <div class="container">
+    <div id="content" class="flex">
+        <div class="page-content page-container" id="page-content">
+            <div class="padding">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header"><strong>Upload only vide file(MP4, MOV)</strong></div>
+                            <div class="card-body">
+                                <form>
 
-  <div class="field">
-    <%= form.label :titile %>
-    <%= form.text_field :titile %>
-  </div>
+                                    <div class="form-group">
+      <%= form.label :titile, "Title" %><br>
+      <%= form.text_field :titile, :class => 'form-control', placeholder: "Write title here..." %>
+    </div>
  
+      <div class="form-group">
+      <%= form.label :size, "File" %><br>
+      <%= form.text_field :size, :class => 'form-control',  placeholder: "Please select a file..."  %>
+    </div>
 
-  <div class="field">
-    <%= form.label :categoryId %>
-    <%= form.text_field :categoryId %>
-  </div>
- 
+                               
+                                   
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
-
-  
-
-  <div class="field">
-    <%= form.label :size %>
-    <%= form.text_field :size %>
-  </div>
-
-  
-
-  <div class="field">
-    <%= form.label :type %>
-    <%= form.text_field :type %>
-  </div>
-
-  
-
-  <div class="field">
-    <%= form.label :path %>
-    <%= form.text_field :path %>
-  </div>
-
- 
-
-  <div class="field">
-    <%= form.label :thumbnails %>
-    <%= form.text_field :thumbnails %>
-  </div>
- 
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>

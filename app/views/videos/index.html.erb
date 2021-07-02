@@ -1,39 +1,41 @@
+<%= stylesheet_link_tag "video.css" %>
+
 <p id="notice"><%= notice %></p>
 
-<h1>Videos</h1>
+ <div class="page-content page-container" id="page-content">
+    <div class="container">
+    
+        <%= link_to 'Upload', new_video_path %>
+       
+        <div class="row container d-flex justify-content-center">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Video gallary</h4>
 
-<table>
-  <thead>
-    <tr>
-      <th>Titile</th>
-      <th>Categoryid</th>
-      <th>Name</th>
-      <th>Size</th>
-      <th>Type</th>
-      <th>Path</th>
-      <th>Thumbnails</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @videos.each do |video| %>
-      <tr>
-        <td><%= video.titile %></td>
-        <td><%= video.categoryId %></td>
-        <td><%= video.name %></td>
-        <td><%= video.size %></td>
-        <td><%= video.type %></td>
-        <td><%= video.path %></td>
-        <td><%= video.thumbnails %></td>
-        <td><%= link_to 'Show', video %></td>
-        <td><%= link_to 'Edit', edit_video_path(video) %></td>
-        <td><%= link_to 'Destroy', video, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Video', new_video_path %>
+                        <div id="lightgallery" class="row lightGallery">
+                            <a href="https://www.youtube.com/watch?v=07d2dXHYb94" class="image-tile" data-abc="true">
+                                <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/c_scale,h_241,w_241/v1533639162/sample.jpg" alt="image small" />
+                                <p class="card-text">Click on any image</p>
+                                <div class="demo-gallery-poster"><img src="http://www.urbanui.com/fily/template/images/lightbox/play-button.png" alt="image" /></div>
+                            </a>
+                            <a href="https://www.youtube.com/watch?v=YW3q59Kn42M" class="image-tile" data-abc="true">
+                                <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/c_scale,h_241,w_241/v1556030070/desktop-1985856_640.jpg" alt="image small" />
+                                <div class="demo-gallery-poster"><img src="http://www.urbanui.com/fily/template/images/lightbox/play-button.png" alt="image" /></div>
+                            </a>
+                            <a href="https://www.youtube.com/watch?v=y0yUXWjwYh4" class="image-tile" data-abc="true">
+                                <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/c_scale,h_241,w_241/v1533641246/billing_invoicing_finance_copy-720x360.png" alt="image small" />
+                                <div class="demo-gallery-poster"><img src="http://www.urbanui.com/fily/template/images/lightbox/play-button.png" alt="image" /></div>
+                            </a>
+                            <a href="https://www.youtube.com/watch?v=_EZbYkmkSoY" class="image-tile" data-abc="true">
+                                <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/c_scale,h_241,w_241/v1556030102/home-office-336373_640.jpg" alt="image small" />
+                                <div class="demo-gallery-poster"><img src="http://www.urbanui.com/fily/template/images/lightbox/play-button.png" alt="image" /></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ 
