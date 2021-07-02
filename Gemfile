@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.3'
 gem 'carrierwave'
+gem 'carrierwave-video-thumbnailer'
+gem 'mini_magick'
 gem 'impressionist'
 gem 'acts_as_votable'
 gem 'bootstrap', '~> 4.0.0'

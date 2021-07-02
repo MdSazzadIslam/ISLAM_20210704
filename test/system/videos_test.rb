@@ -21,7 +21,7 @@ class VideosTest < ApplicationSystemTestCase
     fill_in "Size", with: @video.size
     fill_in "String", with: @video.string
     fill_in "Thumbnails", with: @video.thumbnails
-    fill_in "Titile", with: @video.titile
+    fill_in "Title", with: @video.title
     fill_in "Type", with: @video.type
     click_on "Create Video"
 
@@ -40,7 +40,7 @@ class VideosTest < ApplicationSystemTestCase
     fill_in "Size", with: @video.size
     fill_in "String", with: @video.string
     fill_in "Thumbnails", with: @video.thumbnails
-    fill_in "Titile", with: @video.titile
+    fill_in "Title", with: @video.title
     fill_in "Type", with: @video.type
     click_on "Update Video"
 

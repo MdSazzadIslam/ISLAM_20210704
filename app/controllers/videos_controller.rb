@@ -25,7 +25,7 @@ class VideosController < ApplicationController
   # POST /videos or /videos.json
   def create
     @video = Video.new(video_params)
-
+ 
     respond_to do |format|
       if @video.save
         format.html { redirect_to @video, notice: "Video was successfully created." }
@@ -67,6 +67,6 @@ class VideosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def video_params
-      params.require(:video).permit(:titile, :string, :categoryId, :integer, :name, :string, :size, :integer, :type, :string, :path, :string, :thumbnails, :string)
+      params.require(:video).permit(:title, :string, :categoryId, :integer, :name, :string, :path, :string, :thumbnails, :string, :file, :string)
     end
 end

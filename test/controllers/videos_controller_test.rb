@@ -17,7 +17,7 @@ class VideosControllerTest < ActionDispatch::IntegrationTest
 
   test "should create video" do
     assert_difference('Video.count') do
-      post videos_url, params: { video: { categoryId: @video.categoryId, integer: @video.integer, name: @video.name, path: @video.path, size: @video.size, string: @video.string, thumbnails: @video.thumbnails, titile: @video.titile, type: @video.type } }
+      post videos_url, params: { video: { categoryId: @video.categoryId, integer: @video.integer, name: @video.name, path: @video.path, size: @video.size, string: @video.string, thumbnails: @video.thumbnails, title: @video.title, file: @video.file, type: @video.type } }
     end
 
     assert_redirected_to video_url(Video.last)
@@ -34,7 +34,7 @@ class VideosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update video" do
-    patch video_url(@video), params: { video: { categoryId: @video.categoryId, integer: @video.integer, name: @video.name, path: @video.path, size: @video.size, string: @video.string, thumbnails: @video.thumbnails, titile: @video.titile, type: @video.type } }
+    patch video_url(@video), params: { video: { categoryId: @video.categoryId, integer: @video.integer, name: @video.name, path: @video.path, size: @video.size, string: @video.string, thumbnails: @video.thumbnails, title: @video.title, type: @video.type } }
     assert_redirected_to video_url(@video)
   end
 

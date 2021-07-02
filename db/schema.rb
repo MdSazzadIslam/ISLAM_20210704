@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 2021_07_01_203032) do
     t.string "name"
     t.string "path"
     t.string "thumbnails"
+    t.string "file"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
