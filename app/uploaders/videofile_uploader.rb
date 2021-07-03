@@ -2,7 +2,7 @@ class VideofileUploader < CarrierWave::Uploader::Base
  
     include CarrierWave::MiniMagick
     include CarrierWave::Video  # for your video processing
-    include CarrierWave::Video::Thumbnailer
+    include CarrierWave::Video::Thumbnailer # for your video thumbnailer
  
   # Choose what kind of storage to use for this uploader:
   storage :file
@@ -15,8 +15,8 @@ class VideofileUploader < CarrierWave::Uploader::Base
   end
 
   # Add a white list of extensions which are allowed to be uploaded.
-  def extension_white_list
-    %w( mp4 mov jpg jpeg gif png )
+  def extension_whitelist
+    %w(mp4 mov)
   end
 
 
