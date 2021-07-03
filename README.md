@@ -5,20 +5,11 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version - 2.7.3p183 (2021-04-05 revision 6847ee089d) [x64-mingw32]
+* Rails version - Rails 6.1.4
+* PostgreSQL - "PostgreSQL 13.3, compiled by Visual C++ build 1914, 64-bit"
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Database Configuration - rake db:create
+* Seed Command - rake db:seed
+* Bunndle Install - bundle install
