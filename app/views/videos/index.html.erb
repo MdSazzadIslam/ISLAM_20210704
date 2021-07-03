@@ -15,29 +15,39 @@
 
                         <div id="lightgallery" class="row lightGallery">
                        
-
+   <% @videos.each do |video| %>
                             <a href="https://www.youtube.com/watch?v=07d2dXHYb94" class="image-tile" data-abc="true">
                                 <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/c_scale,h_241,w_241/v1533639162/sample.jpg" alt="image small" />
-                                <p class="card-text">Click on any image</p>
+                                <p class="card-text"><span>Title - </span> <%= video.title %></p>
+                                
+
+   <% if video.categoryId == '1' %>
+          <p class="card-text"><span>Category - </span> Exercise</p>
+   <% end %>
+
+              <% if video.categoryId == '2' %>
+          <p class="card-text"><span>Category - </span> Education</p>
+   <% end %>
+
+      <% if video.categoryId == '3' %>
+          <p class="card-text"><span>Category - </span> Recipe</p>
+   <% end %>                      
+
+
+                                
                                 <div class="demo-gallery-poster"><img src="http://www.urbanui.com/fily/template/images/lightbox/play-button.png" alt="image" /></div>
                             </a>
-                            <a href="https://www.youtube.com/watch?v=YW3q59Kn42M" class="image-tile" data-abc="true">
-                                <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/c_scale,h_241,w_241/v1556030070/desktop-1985856_640.jpg" alt="image small" />
-                                <div class="demo-gallery-poster"><img src="http://www.urbanui.com/fily/template/images/lightbox/play-button.png" alt="image" /></div>
-                            </a>
-                            <a href="https://www.youtube.com/watch?v=y0yUXWjwYh4" class="image-tile" data-abc="true">
-                                <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/c_scale,h_241,w_241/v1533641246/billing_invoicing_finance_copy-720x360.png" alt="image small" />
-                                <div class="demo-gallery-poster"><img src="http://www.urbanui.com/fily/template/images/lightbox/play-button.png" alt="image" /></div>
-                            </a>
-                            <a href="https://www.youtube.com/watch?v=_EZbYkmkSoY" class="image-tile" data-abc="true">
-                                <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/c_scale,h_241,w_241/v1556030102/home-office-336373_640.jpg" alt="image small" />
-                                <div class="demo-gallery-poster"><img src="http://www.urbanui.com/fily/template/images/lightbox/play-button.png" alt="image" /></div>
-                            </a>
+                       
+                            <% end %>
+                           
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+
+         
     </div>
 </div>
  

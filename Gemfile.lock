@@ -61,7 +61,7 @@ GEM
       tzinfo (~> 2.0)
       zeitwerk (~> 2.3)
     acts_as_votable (0.13.1)
-    addressable (2.7.0)
+    addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
     autoprefixer-rails (10.2.5.1)
       execjs (> 0)
@@ -90,8 +90,12 @@ GEM
       marcel (~> 1.0.0)
       mini_mime (>= 0.1.3)
       ssrf_filter (~> 1.0)
+    carrierwave-video (0.6.0)
+      carrierwave
+      streamio-ffmpeg
     carrierwave-video-thumbnailer (0.1.4)
       carrierwave
+    carrierwave_backgrounder (0.0.2)
     childprocess (3.0.0)
     concurrent-ruby (1.1.9)
     crass (1.0.6)
@@ -124,6 +128,7 @@ GEM
     mini_mime (1.1.0)
     minitest (5.14.4)
     msgpack (1.4.2)
+    multi_json (1.15.0)
     nio4r (2.5.7)
     nokogiri (1.11.7-x64-mingw32)
       racc (~> 1.4)
@@ -173,7 +178,7 @@ GEM
     regexp_parser (2.1.1)
     ruby-vips (2.1.2)
       ffi (~> 1.12)
-    rubyzip (2.3.0)
+    rubyzip (2.3.1)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -201,6 +206,8 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     ssrf_filter (1.0.7)
+    streamio-ffmpeg (3.0.2)
+      multi_json (~> 1.8)
     thor (1.1.0)
     tilt (2.0.10)
     turbolinks (5.2.1)
@@ -210,7 +217,6 @@ GEM
       concurrent-ruby (~> 1.0)
     tzinfo-data (1.2021.1)
       tzinfo (>= 1.0.0)
-    video_thumbnailer (0.2.0)
     web-console (4.1.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -242,7 +248,9 @@ DEPENDENCIES
   byebug
   capybara (>= 3.26)
   carrierwave
+  carrierwave-video
   carrierwave-video-thumbnailer
+  carrierwave_backgrounder
   impressionist
   jbuilder (~> 2.7)
   jquery-rails
@@ -253,9 +261,9 @@ DEPENDENCIES
   rails (~> 6.1.4)
   sass-rails (>= 6)
   selenium-webdriver
+  streamio-ffmpeg
   turbolinks (~> 5)
   tzinfo-data
-  video_thumbnailer
   web-console (>= 4.1.0)
   webdrivers
   webpacker (~> 5.0)

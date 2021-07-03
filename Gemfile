@@ -2,8 +2,12 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.3'
+
 gem 'carrierwave'
+gem 'carrierwave-video'
 gem 'carrierwave-video-thumbnailer'
+gem 'carrierwave_backgrounder'
+gem 'streamio-ffmpeg'
 gem 'mini_magick'
 gem 'impressionist'
 gem 'acts_as_votable'
