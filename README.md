@@ -13,3 +13,4 @@ Things you may want to cover:
 * Database Configuration - rake db:create
 * Seed Command - rake db:seed
 * Bunndle Install - bundle install
+* To install nodemodule - npm install
