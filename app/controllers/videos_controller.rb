@@ -26,10 +26,7 @@ class VideosController < ApplicationController
   def create
         
     @video = Video.new(video_params)
- 
-    content = @video.file.read
-    @name= @video.file.filename
-    
+
     respond_to do |format|
       if @video.save
         
@@ -72,6 +69,6 @@ class VideosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def video_params
-      params.require(:video).permit(:title, :categoryId, :name, :path, :thumbnails, :file)
+      params.require(:video).permit(:title, :categoryId, :name, :path, :file, :thumbnails, :video)
     end
 end
