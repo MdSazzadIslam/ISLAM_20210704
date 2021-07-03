@@ -8,7 +8,7 @@ application up and running.
 
 * Ruby version - 2.7.3p183 (2021-04-05 revision 6847ee089d) [x64-mingw32]
 * Rails version - Rails 6.1.4
-* PostgreSQL - "PostgreSQL 13.3, compiled by Visual C++ build 1914, 64-bit"
+* PostgreSQL - "PostgreSQL 13.3"
 
 ///////////////////////////////////////////////////////////////////////////////////////
 
