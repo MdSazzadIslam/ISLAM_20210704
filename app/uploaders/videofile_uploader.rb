@@ -1,6 +1,6 @@
 class VideofileUploader < CarrierWave::Uploader::Base
  
-    include CarrierWave::MiniMagick
+    #include CarrierWave::MiniMagick #for image processing
     include CarrierWave::Video  # for your video processing
     include CarrierWave::Video::Thumbnailer # for your video thumbnailer
  
