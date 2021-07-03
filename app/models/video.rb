@@ -1,5 +1,5 @@
 class Video < ApplicationRecord
-validates :title, :file, :categoryId, presence: true
+validates :title, :file,  :categoryId, presence: true
 has_one_attached :video
 has_many_attached :thumbnails
 
@@ -11,10 +11,10 @@ mount_uploader :file, VideofileUploader
 #validates_attachment :file, content_type: { content_type: "media/mp4/mov" }
 validate :file_size_under_th_mb
  
-   def uploaded_file=(file_field)
+ def uploaded_file=(file_field)
     self.name = base_part_of(file_field.original_filename)
-    #self.data = file_field.read
-    self.path = Rails.root + "/public/uploads/" + self.name
+    self.data = file_field.read
+    self.image_url = Rails.root + "/public/uploads/" + self.name
   end
 
   def base_part_of(file_name)

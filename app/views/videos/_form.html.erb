@@ -1,55 +1,50 @@
 <%= stylesheet_link_tag "video.css" %>
 <%= form_with(model: video)  do |form| %>
-  <% if video.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(video.errors.count, "error") %> prohibited this video from being saved:</h2>
-
-      <ul>
-        <% video.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-    <div class="container">
-    <div id="content" class="flex">
-        <div class="page-content page-container" id="page-content">
-            <div class="padding">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="card">
-                            <div class="card-header"><strong>Upload only vide file(MP4, MOV)</strong></div>
-                            <div class="card-body">
-                                <form>
-
-                                    <div class="form-group">
-                                    
-      <%= form.label :title, "Title" %><br>
-      <%= form.text_field :title, :class => 'form-control', placeholder: "Write title here..." %>
-    </div>
- 
-      <div class="form-group">
-      <%= form.label :name, "File" %><br>
-       <%= form.file_field :file,  :class => 'form-control',  placeholder: "Please select a file..."  %>  
-     
-     
-      
-
-    </div>
- 
-      <div class="form-group">
-  <%= form.collection_select :categoryId, Category.all, :id, :name, :class => 'form-control'  %>
-   </div>
-                     
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<% if video.errors.any? %>
+<div id="error_explanation">
+   <h2><%= pluralize(video.errors.count, "error") %> prohibited this video from being saved:</h2>
+   <ul>
+      <% video.errors.each do |error| %>
+      <li><%= error.full_message %></li>
+      <% end %>
+   </ul>
 </div>
+<% end %>
+<div class="container">
 
+   <div id="content" class="flex">
+      <div class="page-content page-container" id="page-content">
+      
+      
+         <div class="padding">
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="card">
+                  <%= link_to 'Back', videos_path %>
+                     <div class="card-header"><strong>Upload only vide file(MP4, MOV)</strong></div>
+                     <div class="card-body">
+                        <form>
+                           <div class="form-group">
+                              <%= form.label :title, "Title" %><br>
+                              <%= form.text_field :title, :class => 'form-control', placeholder: "Write title here..." %>
+                           </div>
+                           <%#  Upload your file:<%= form.file_field("uploaded_file") %> 
+                           <div class="form-group">
+                              <%= form.label :name, "File" %><br>
+                              <%= form.file_field :file,   :class => 'form-control',  placeholder: "Please select a file..."  %>  
+                           </div>
+                           <div class="form-group">
+                              <%= form.collection_select :categoryId, Category.all, :id, :name,   :class => 'form-control'  %>
+                           </div>
+                           <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+    
+</div>
+</div>
 <% end %>

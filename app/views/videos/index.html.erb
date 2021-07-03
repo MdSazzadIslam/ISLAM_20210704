@@ -1,53 +1,33 @@
 <%= stylesheet_link_tag "video.css" %>
-
 <p id="notice"><%= notice %></p>
-
- <div class="page-content page-container" id="page-content">
-    <div class="container">
-    
+<div class="page-content page-container" id="page-content">
+   <div class="container">
+      <div class="row container d-flex justify-content-center">
         <%= link_to 'Upload', new_video_path %>
-       
-        <div class="row container d-flex justify-content-center">
-            <div class="col-lg-12">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Video gallary</h4>
-
-                        <div id="lightgallery" class="row lightGallery">
-                       
-   <% @videos.each do |video| %>
-                            <a href="https://www.youtube.com/watch?v=07d2dXHYb94" class="image-tile" data-abc="true">
-                                <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/c_scale,h_241,w_241/v1533639162/sample.jpg" alt="image small" />
-                                <p class="card-text"><span>Title - </span> <%= video.title %></p>
-                                
-
-   <% if video.categoryId == '1' %>
-          <p class="card-text"><span>Category - </span> Exercise</p>
-   <% end %>
-
-              <% if video.categoryId == '2' %>
-          <p class="card-text"><span>Category - </span> Education</p>
-   <% end %>
-
-      <% if video.categoryId == '3' %>
-          <p class="card-text"><span>Category - </span> Recipe</p>
-   <% end %>                      
-
-
-                                
-                                <div class="demo-gallery-poster"><img src="http://www.urbanui.com/fily/template/images/lightbox/play-button.png" alt="image" /></div>
-                            </a>
-                       
-                            <% end %>
-                           
-                        </div>
-                    </div>
-                </div>
+         <div class="col-lg-12">
+            <div class="card">
+               <div class="card-body">
+                  <h4 class="card-title">Video gallary</h4>
+                  <div id="lightgallery" class="row lightGallery">
+                     <% @videos.each do |video| %>
+                     <div class="col-md-3 pb-video">
+                        <%= video_tag video.file, :size => "200x300", :controls => true %>
+                        <label class="label-warning text-center"><span>Title - </span> <%= video.title %></label>
+                        <% if video.categoryId == '1' %>
+                        <p class=" card-text"><span>Category - </span> Exercise</p>
+                        <% end %>
+                        <% if video.categoryId == '2' %>
+                        <p class="card-text"><span>Category - </span> Education</p>
+                        <% end %>
+                        <% if video.categoryId == '3' %>
+                        <p class="card-text"><span>Category - </span> Recipe</p>
+                        <% end %>                      
+                     </div>
+                     <% end %>
+                  </div>
+               </div>
             </div>
-        </div>
-
-
-         
-    </div>
+         </div>
+      </div>
+   </div>
 </div>
- 
